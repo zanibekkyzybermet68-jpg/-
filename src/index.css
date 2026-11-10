@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Heritage Gastronomy Colors */
+  --color-surface: #121413;
+  --color-emerald-mid: #1C362B;
+  --color-on-tertiary-container: #a1978c;
+  --color-surface-charcoal: #181818;
+  --color-surface-variant: #333534;
+  --color-primary: #b0cdbe;
+  --color-on-tertiary-fixed: #201b13;
+  --color-on-secondary-fixed-variant: #574500;
+  --color-on-error: #690005;
+  --color-emerald-light: #2A4B3D;
+  --color-on-surface: #e2e3e0;
+  --color-on-secondary-container: #342800;
+  --color-inverse-surface: #e2e3e0;
+  --color-tertiary-container: #363027;
+  --color-canvas-obsidian: #121413;
+  --color-tertiary: #d0c5b8;
+  --color-on-secondary-fixed: #241a00;
+  --color-gold-leaf: #D4AF37;
+  --color-surface-container-high: #282a29;
+  --color-background: #121413;
+  --color-surface-container-low: #1a1c1b;
+  --color-surface-tint: #b0cdbe;
+  --color-secondary-container: #af8d11;
+  --color-emerald-deep: #0E1C16;
+  --color-error-container: #93000a;
+  --color-on-surface-variant: #c2c8c3;
+  --color-surface-container-highest: #333534;
+  --color-primary-container: #1c362b;
+  --color-inverse-primary: #496457;
+  --color-on-primary-container: #839f91;
+  --color-stone-light: #A69F95;
+  --color-outline: #8c928d;
+  --color-secondary-fixed-dim: #e9c349;
+  --color-primary-fixed: #cbe9d9;
+  --color-on-background: #e2e3e0;
+  --color-inverse-on-surface: #2f3130;
+  --color-on-tertiary-fixed-variant: #4d463c;
+  --color-on-primary: #1b352a;
+  --color-cream-alabaster: #FBF9F5;
+  --color-on-tertiary: #362f27;
+  --color-on-secondary: #3c2f00;
+  --color-surface-bright: #383a38;
+  --color-gold-light: #F2DE9C;
+  --color-on-primary-fixed: #052016;
+  --color-surface-container: #1e201f;
+  --color-tertiary-fixed: #ede1d4;
+  --color-surface-container-lowest: #0d0f0e;
+  --color-gold-muted: #A88A30;
+  --color-primary-fixed-dim: #b0cdbe;
+  --color-stone-warm: #625A50;
+  --color-secondary: #e9c349;
+  --color-secondary-fixed: #ffe088;
+  --color-on-primary-fixed-variant: #324c40;
+  --color-on-error-container: #ffdad6;
+  --color-error: #ffb4ab;
+  --color-tertiary-fixed-dim: #d0c5b8;
+  --color-outline-variant: #424844;
+  --color-surface-dim: #121413;
+
+  /* Custom Spacing Tokens */
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-space-xl: 3rem;
+  --spacing-space-2xl: 5rem;
+  --spacing-gutter-sm: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-md: 1.5rem;
+  --spacing-gutter-lg: 2.5rem;
+  --spacing-margin-sm: 1.25rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-lg: 5rem;
+
+  /* Font Families */
+  --font-headline-xl: "EB Garamond", Georgia, serif;
+  --font-headline-xl-mobile: "EB Garamond", Georgia, serif;
+  --font-headline-lg: "EB Garamond", Georgia, serif;
+  --font-headline-lg-mobile: "EB Garamond", Georgia, serif;
+  --font-headline-md: "EB Garamond", Georgia, serif;
+  --font-headline-sm: "EB Garamond", Georgia, serif;
+  --font-title-lg: "EB Garamond", Georgia, serif;
+  --font-title-md: "Manrope", sans-serif;
+  --font-title-sm: "Manrope", sans-serif;
+  --font-body-lg: "Manrope", sans-serif;
+  --font-body-md: "Manrope", sans-serif;
+  --font-body-sm: "Manrope", sans-serif;
+  --font-label-md: "Manrope", sans-serif;
+  --font-label-sm: "Manrope", sans-serif;
+
+  /* Font Sizes with Line-Height, Letter-Spacing & Weight */
+  --text-headline-xl: 56px;
+  --text-headline-xl--line-height: 64px;
+  --text-headline-xl--letter-spacing: -0.01em;
+  --text-headline-xl--font-weight: 400;
+
+  --text-headline-xl-mobile: 38px;
+  --text-headline-xl-mobile--line-height: 46px;
+  --text-headline-xl-mobile--letter-spacing: -0.01em;
+  --text-headline-xl-mobile--font-weight: 400;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.005em;
+  --text-headline-lg--font-weight: 400;
+
+  --text-headline-lg-mobile: 30px;
+  --text-headline-lg-mobile--line-height: 38px;
+  --text-headline-lg-mobile--letter-spacing: 0em;
+  --text-headline-lg-mobile--font-weight: 400;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+  --text-headline-md--font-weight: 500;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  --text-headline-sm--font-weight: 500;
+
+  --text-title-lg: 20px;
+  --text-title-lg--line-height: 28px;
+  --text-title-lg--letter-spacing: 0.02em;
+  --text-title-lg--font-weight: 600;
+
+  --text-title-md: 16px;
+  --text-title-md--line-height: 24px;
+  --text-title-md--letter-spacing: 0.04em;
+  --text-title-md--font-weight: 600;
+
+  --text-title-sm: 14px;
+  --text-title-sm--line-height: 20px;
+  --text-title-sm--letter-spacing: 0.06em;
+  --text-title-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 30px;
+  --text-body-lg--font-weight: 300;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 26px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.14em;
+  --text-label-md--font-weight: 600;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.18em;
+  --text-label-sm--font-weight: 500;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #121413;
+    color: #e2e3e0;
+    font-family: "Manrope", sans-serif;
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
